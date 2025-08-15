@@ -53,19 +53,19 @@ It’s built with the **MVC architecture** for clean structure and scalability.
 ## My Project Screenshots
 
 ### 1️⃣ Index Page
-<img src="public/images/index.jpg" alt="Homepage" width="400">
+<img src="public/images/index.jpg" alt="Homepage" width="600">
 
 ### 2️⃣ Show Up
-<img src="public/images/show.jpg" alt="List Details" width="400">
+<img src="public/images/show.jpg" alt="List Details" width="600">
 
 ### 3️⃣ Flash Message
-<img src="public/images/flash.jpg" alt="Flash Message" width="400">
+<img src="public/images/flash.jpg" alt="Flash Message" width="600">
 
 ### 4️⃣ Edit Page
-<img src="public/images/edit.jpg" alt="Edit Form" width="400">
+<img src="public/images/edit.jpg" alt="Edit Form" width="600">
 
 ### 5️⃣ Review Page
-<img src="public/images/review.jpg" alt="Review Page" width="400">
+<img src="public/images/review.jpg" alt="Review Page" width="600">
 
 ---
 
