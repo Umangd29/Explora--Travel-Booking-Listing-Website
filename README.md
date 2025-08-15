@@ -54,20 +54,20 @@ It’s built with the **MVC architecture** for clean structure and scalability.
 ## 📂 Project Structure
 
 WanderLust/
-│── controllers/       # Stores all route callback functions (controller logic)
-│── init/              # Database seeding and initialization scripts
-│── models/            # Mongoose models for MongoDB collections
-│── public/            # Static assets (CSS, JS, Images)
-│── routes/            # Express route definitions
-│── utils/             # Utility functions/helpers
-│── views/             # EJS templates for frontend rendering
-│── .env               # Environment variables configuration
-│── app.js             # Main application entry point
-│── cloudConfig.js     # Cloudinary configuration for image hosting
-│── middleware.js      # Custom middleware functions
-│── schema.js          # Joi validation schemas
-│── package.json       # Project dependencies and scripts
-│── .gitignore         # Git ignore rules
+── controllers/       # Stores all route callback functions (controller logic)
+── init/              # Database seeding and initialization scripts
+── models/            # Mongoose models for MongoDB collections 
+── public/            # Static assets (CSS, JS, Images) 
+── routes/            # Express route definitions 
+── utils/             # Utility functions/helpers 
+── views/             # EJS templates for frontend rendering 
+── .env               # Environment variables configuration 
+── app.js             # Main application entry point 
+── cloudConfig.js     # Cloudinary configuration for image hosting 
+── middleware.js      # Custom middleware functions 
+── schema.js          # Joi validation schemas 
+── package.json       # Project dependencies and scripts 
+── .gitignore         # Git ignore rules 
 
 
 ---
@@ -78,7 +78,7 @@ WanderLust/
 ![Index Page](images/index.jpg)
 
 ### 2️⃣ Sign Up
-![Sign Up Page](images/show.jpg)
+![Show Page](images/show.jpg)
 
 ### 3️⃣ Flash Message
 ![Flash Message](images/flash.jpg)
