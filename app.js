@@ -20,6 +20,8 @@ const passport = require('passport');
 const User = require('./models/user');
 const MongoStore = require('connect-mongo');
 const { error } = require("console");
+const Listing = require('./models/listings');
+
 
 
 const port = 8080;
@@ -90,9 +92,10 @@ app.use("/listings/:id/reviews", reviewsRouter);
 app.use("/", userRouter);
 
 
-app.get("/", (req, res) => {
-    res.render("listings/index.ejs");
-})
+app.get("/", async (req, res) => {
+    const allListing = await Listing.find();
+    res.render("listings/index", { allListing });
+});
 
 
 // * route
