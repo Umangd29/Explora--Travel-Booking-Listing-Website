@@ -1,0 +1,101 @@
+<% layout ("/layouts/boilerplate") %>
+
+    <body>
+        <!-- 
+        Form to edit Listing.
+        Uses method-override to spoof PUT method via ?_method=PUT.
+        Fields are pre-filled with existing values using EJS.
+     -->
+        <div class="row mt-3">
+            <div class="col-8 offset-2">
+                <h2>Edit Listing</h2>
+                <form method="POST" action="/listings/<%= List._id %>?_method=PUT" class="needs-validation" novalidate
+                    enctype="multipart/form-data">
+                    <!-- Title -->
+                    <div class="mb-3">
+                        <lable for="name" class="form-label">Title :</lable>
+                        <input id="name" name="Listing[title]" type="text" placeholder="Enter title"
+                            class="form-control" value="<%= List.title%>" required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                        <div id="name" class="invalid-feedback">
+                            Please provide a valid Name.
+                        </div>
+                    </div>
+
+                    <!-- Description -->
+                    <div class="mb-3">
+                        <lable for="description" class="form-label">Description :</lable>
+                        <input id="description" name="Listing[description]" type="text" placeholder="Enter description"
+                            class="form-control" value="<%= List.description %>" required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                        <div id="description" class="invalid-feedback">
+                            Please provide a valid Description.
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        Original Listing Image: <br>
+                        <img src= "<%= originalImageUrl %>" />
+                    </div>
+
+                    <div class="mb-3">
+                        <lable for="image" class="form-label">Image :</lable>
+                        <input id="image" name="Listing[image]" type="file" class="form-control"
+                            value="<%= List.image.url %>">
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <!-- Price -->
+                        <div class="mb-3 col-md-4">
+                            <lable for="price" class="form-label">Price :</lable>
+                            <input id="price" name="Listing[price]" type="text" placeholder="Enter price"
+                                class="form-control" value="<%= List.price %>" required>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                            <div id="price" class="invalid-feedback">
+                                Please provide a valid Price.
+                            </div>
+                        </div>
+
+                        <!-- Country -->
+                        <div class="mb-3 col-md-8">
+                            <lable for="country" class="form-label">Country :</lable>
+                            <input id="country" name="Listing[country]" type="text" placeholder="Enter country"
+                                class="form-control" value="<%= List.country %>" required>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                            <div id="country" class="invalid-feedback">
+                                Please provide a valid Country.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Location -->
+                    <div class="mb-3">
+                        <lable for="location" class="form-label">Location :</lable>
+                        <input id="location" name="Listing[location]" type="text" placeholder="Enter location"
+                            class="form-control" value="<%= List.location %>" required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                        <div id="location" class="invalid-feedback">
+                            Please provide a valid Location.
+                        </div>
+                    </div>
+
+                    <!-- Submit -->
+                    <button class="btn btn-dark edit-btn mt-3">Update</button>
+                    <br><br>
+                </form>
+            </div>
+        </div>
+    </body>
