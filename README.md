@@ -48,46 +48,24 @@ It’s built with the **MVC architecture** for clean structure and scalability.
 > - 🎯 Advanced filters  
 > - 🧭 Enhanced navigation bar with icons  
 
-
----
-
-## 📂 Project Structure
-
-WanderLust/
-── controllers/       # Stores all route callback functions (controller logic)
-── init/              # Database seeding and initialization scripts
-── models/            # Mongoose models for MongoDB collections 
-── public/            # Static assets (CSS, JS, Images) 
-── routes/            # Express route definitions 
-── utils/             # Utility functions/helpers 
-── views/             # EJS templates for frontend rendering 
-── .env               # Environment variables configuration 
-── app.js             # Main application entry point 
-── cloudConfig.js     # Cloudinary configuration for image hosting 
-── middleware.js      # Custom middleware functions 
-── schema.js          # Joi validation schemas 
-── package.json       # Project dependencies and scripts 
-── .gitignore         # Git ignore rules 
-
-
 ---
 
 ## My Project Screenshots
 
 ### 1️⃣ Index Page
-![Index Page](images/index.jpg)
+![Index Page](public/images/index.jpg)
 
 ### 2️⃣ Sign Up
-![Show Page](images/show.jpg)
+![Show Page](public/images/show.jpg)
 
 ### 3️⃣ Flash Message
-![Flash Message](images/flash.jpg)
+![Flash Message](public/images/flash.jpg)
 
 ### 4️⃣ Edit Page
-![Edit Page](images/edit.jpg)
+![Edit Page](public/images/edit.jpg)
 
 ### 5️⃣ Review Page
-![Review Page](images/review.jpg)
+![Review Page](public/images/review.jpg)
 
 ---
 
