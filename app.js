@@ -1,4 +1,4 @@
-if(process.env.NODE_ENV != "production") {
+if (process.env.NODE_ENV != "production") {
     require("dotenv").config();
 }
 
@@ -18,6 +18,8 @@ const flash = require("connect-flash");
 const LocalStrategy = require('passport-local');
 const passport = require('passport');
 const User = require('./models/user');
+const MongoStore = require('connect-mongo');
+const { error } = require("console");
 
 
 const port = 8080;
@@ -31,9 +33,23 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride("_method"));
 
+const dbUrl = process.env.ATLASDB_URL;
+
+const store = MongoStore.create({
+    mongoUrl: dbUrl,
+    touchAfter: 24 * 3600,
+    crypto: {
+        secret: process.env.SECRET,
+    },
+})
+
+store.on(error, (err)=> {
+    console.log("Error in MONGO SESSION STORE", err)
+});
 
 const sessionOptions = {
-    secret: "mysecretcode",
+    store,
+    secret: process.env.SECRET,
     resave: false,
     saveUninitialized: true,
 };
@@ -55,7 +71,7 @@ app.use((req, res, next) => {
 
 // DATABASE CONNECTION
 async function main() {
-    await mongoose.connect('mongodb://127.0.0.1:27017/Wanderlust');
+    await mongoose.connect(dbUrl);
 }
 
 main()
@@ -74,8 +90,8 @@ app.use("/listings/:id/reviews", reviewsRouter);
 app.use("/", userRouter);
 
 
-app.get("/", (req,res) => {
-    res.send("It is not develop at")
+app.get("/", (req, res) => {
+    res.redirect("/listings");
 })
 
 
