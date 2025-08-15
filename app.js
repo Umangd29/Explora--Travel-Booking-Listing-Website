@@ -78,7 +78,7 @@ async function main() {
 
 main()
     .then(() => {
-        console.log("Wanderlust DB connected");
+        console.log("Explora DB connected");
     })
     .catch((err) => {
         console.log("DB connection error:", err);

@@ -9,7 +9,7 @@ const initData = require('./data.js');             // Sample data to seed DB
 
 main()
     .then(() => {
-        console.log("Wanderlust DB connected");
+        console.log("Explora DB connected");
     })
     .catch((err) => {
         console.log("Connection error:", err);

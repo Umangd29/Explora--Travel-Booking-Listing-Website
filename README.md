@@ -1,4 +1,4 @@
-# 🌍 WanderLust — Travel Booking & Listing Website
+# 🌍 Explora — Travel Booking & Listing Website
 
 [![Node.js](https://img.shields.io/badge/Node.js-18.x-green?logo=node.js)](https://nodejs.org/) 
 [![Express.js](https://img.shields.io/badge/Express.js-Backend-blue?logo=express)](https://expressjs.com/) 
@@ -9,10 +9,10 @@
 ---
 
 ## ✨ Project Overview
-**WanderLust** is a **full-stack travel booking and listing platform** where users can explore, list, and manage travel destinations.  
+**Explora** is a **full-stack travel booking and listing platform** where users can explore, list, and manage travel destinations.  
 It’s built with the **MVC architecture** for clean structure and scalability.  
 
-🚀 **Live Demo:** [WanderLust Website](https://wanderlust-unhh.onrender.com/listings)
+🚀 **Live Demo:** [Explora Website](https://wanderlust-unhh.onrender.com/listings)
 
 ---
 
@@ -47,6 +47,7 @@ It’s built with the **MVC architecture** for clean structure and scalability.
 > - 🔍 Search bar  
 > - 🎯 Advanced filters  
 > - 🧭 Enhanced navigation bar with icons  
+
 
 ---
 
