@@ -91,7 +91,7 @@ app.use("/", userRouter);
 
 
 app.get("/", (req, res) => {
-    res.redirect("/listings");
+    res.render("listings/index.ejs");
 })
 
 
