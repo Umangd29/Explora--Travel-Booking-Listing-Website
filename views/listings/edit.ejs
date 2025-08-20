@@ -39,7 +39,7 @@
 
                     <div class="mb-3">
                         Original Listing Image: <br>
-                        <img src= "<%= originalImageUrl %>" />
+                        <img src="<%= originalImageUrl %>" />
                     </div>
 
                     <div class="mb-3">
@@ -89,6 +89,156 @@
                         </div>
                         <div id="location" class="invalid-feedback">
                             Please provide a valid Location.
+                        </div>
+                    </div>
+
+                    <!-- Category -->
+                    <label for="category" class="form-label">Choose Category</label>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" id="rooms" name="Listing[category][]"
+                                    value="Rooms" <%=List.category.includes("Rooms") ? "checked" : "" %>>
+                                <label class="form-check-label d-flex align-items-center" for="rooms">
+                                    <i class="fa-solid fa-bed me-2"></i> Rooms
+                                </label>
+                            </div>
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" id="iconic-cities"
+                                    name="Listing[category][]" <%=List.category.includes("Iconic-Cities") ? "checked" : "" %> value="Iconic-Cities">
+                                <label class="form-check-label d-flex align-items-center" for="iconic-cities">
+                                    <i class="fa-solid fa-mountain-city me-2"></i> Iconic-Cities
+                                </label>
+                            </div>
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" id="mountains"
+                                    name="Listing[category][]" <%=List.category.includes("Mountains") ? "checked" : "" %> value="Mountains">
+                                <label class="form-check-label d-flex align-items-center" for="mountains">
+                                    <i class="fa-solid fa-mountain-sun me-2"></i> Mountains
+                                </label>
+                            </div>
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" id="castles" name="Listing[category][]" <%=List.category.includes("Castles") ? "checked" : "" %>
+                                    value="Castles">
+                                <label class="form-check-label d-flex align-items-center" for="castles">
+                                    <i class="fa-brands fa-fort-awesome me-2"></i> Castles
+                                </label>
+                            </div>
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" id="boat" name="Listing[category][]" <%=List.category.includes("Boat") ? "checked" : "" %>
+                                    value="Boat">
+                                <label class="form-check-label d-flex align-items-center" for="boat">
+                                    <i class="fa-solid fa-sailboat me-2"></i> Boat
+                                </label>
+                            </div>
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" id="ski-in-out"
+                                    name="Listing[category][]" <%=List.category.includes("Ski-in-out") ? "checked" : "" %> value="Ski-in-out">
+                                <label class="form-check-label d-flex align-items-center" for="ski-in-out">
+                                    <i class="fa-solid fa-person-snowboarding me-2"></i> Ski-in/out
+                                </label>
+                            </div>
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" id="apartment"
+                                    name="Listing[category][]" <%=List.category.includes("Apartment") ? "checked" : "" %> value="Apartment">
+                                <label class="form-check-label d-flex align-items-center" for="apartment">
+                                    <i class="fa-solid fa-building me-2"></i> Apartment
+                                </label>
+                            </div>
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" id="new" name="Listing[category][]" <%=List.category.includes("New") ? "checked" : "" %>
+                                    value="New">
+                                <label class="form-check-label d-flex align-items-center" for="new">
+                                    <i class="fa-solid fa-key me-2"></i> New
+                                </label>
+                            </div>
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" id="woodlands"
+                                    name="Listing[category][]" <%=List.category.includes("Woodlands") ? "checked" : "" %> value="Woodlands">
+                                <label class="form-check-label d-flex align-items-center" for="woodlands">
+                                    <i class="fa-solid fa-tree-city me-2"></i> Woodlands
+                                </label>
+                            </div>
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" id="lake" name="Listing[category][]" <%=List.category.includes("Lake") ? "checked" : "" %>
+                                    value="Lake">
+                                <label class="form-check-label d-flex align-items-center" for="lake">
+                                    <i class="fa-solid fa-water me-2"></i> Lake
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" id="amazing-pools"
+                                    name="Listing[category][]" <%=List.category.includes("amazing-pools") ? "checked" : "" %> value="Amazing-Pools">
+                                <label class="form-check-label d-flex align-items-center" for="amazing-pools">
+                                    <i class="fa-solid fa-person-swimming me-2"></i> Amazing-Pools
+                                </label>
+                            </div>
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" id="cabins" name="Listing[category][]" <%=List.category.includes("Cabins") ? "checked" : "" %>
+                                    value="Cabins">
+                                <label class="form-check-label d-flex align-items-center" for="cabins">
+                                    <i class="fa-solid fa-house me-2"></i> Cabins
+                                </label>
+                            </div>
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" id="camping" name="Listing[category][]" <%=List.category.includes("Camping") ? "checked" : "" %>
+                                    value="Camping">
+                                <label class="form-check-label d-flex align-items-center" for="camping">
+                                    <i class="fa-solid fa-campground me-2"></i> Camping
+                                </label>
+                            </div>
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" id="farm" name="Listing[category][]" <%=List.category.includes("Farm") ? "checked" : "" %>
+                                    value="Farm">
+                                <label class="form-check-label d-flex align-items-center" for="farm">
+                                    <i class="fa-solid fa-cow me-2"></i> Farm
+                                </label>
+                            </div>
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" id="arctic" name="Listing[category][]" <%=List.category.includes("Arctic") ? "checked" : "" %>
+                                    value="Arctic">
+                                <label class="form-check-label d-flex align-items-center" for="arctic">
+                                    <i class="fa-solid fa-snowflake me-2"></i> Arctic
+                                </label>
+                            </div>
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" id="beach" name="Listing[category][]" <%=List.category.includes("Beach") ? "checked" : "" %>
+                                    value="Beach">
+                                <label class="form-check-label d-flex align-items-center" for="beach">
+                                    <i class="fa-solid fa-umbrella-beach me-2"></i> Beach
+                                </label>
+                            </div>
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" id="countryside"
+                                    name="Listing[category][]" <%=List.category.includes("Countryside") ? "checked" : "" %> value="Countryside">
+                                <label class="form-check-label d-flex align-items-center" for="countryside">
+                                    <i class="fa-solid fa-house-chimney-window me-2"></i> Countryside
+                                </label>
+                            </div>
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" id="bed-and-breakfasts"
+                                    name="Listing[category][]" <%=List.category.includes("Bed-and-Breakfasts") ? "checked" : "" %> value="Bed-and-Breakfasts">
+                                <label class="form-check-label d-flex align-items-center" for="bed-and-breakfasts">
+                                    <i class="fa-solid fa-mug-hot me-2"></i> Bed & Breakfasts
+                                </label>
+                            </div>
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" id="campsite" name="Listing[category][]" <%=List.category.includes("Campsite") ? "checked" : "" %>
+                                    value="Campsite">
+                                <label class="form-check-label d-flex align-items-center" for="campsite">
+                                    <i class="fa-solid fa-tents me-2"></i> Campsite
+                                </label>
+                            </div>
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" id="historical-homes"
+                                    name="Listing[category][]" <%=List.category.includes("Historical-Homes") ? "checked" : "" %> value="Historical-Homes">
+                                <label class="form-check-label d-flex align-items-center" for="historical-homes">
+                                    <i class="fa-solid fa-landmark me-2"></i> Historical Homes
+                                </label>
+                            </div>
                         </div>
                     </div>
 

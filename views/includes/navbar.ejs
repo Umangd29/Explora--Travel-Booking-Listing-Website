@@ -1,23 +1,28 @@
 <nav class="navbar navbar-expand-md bg-body-tertiary sticky-top border-bottom">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/listings"><i class="fa-regular fa-compass"></i></a>
+    <a class="navbar-brand" href="/listings"><img class="logo" src="/images/travel.svg" alt="logo" width="40px" height="30px">
+      <div class="C-name">Explora</div>
+    </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
       aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav ">
-        <a class="nav-link" href="/listings">All Listing</a>
+      <div class="navbar-nav ms-auto">
+        <form class="d-flex" role="search">
+          <input class="form-control me-2 search-input" type="search" placeholder="Search destinations"  />
+          <button class="btn search-btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i>Search</button>
+        </form>
       </div>
       <div class="navbar-nav ms-auto">
-        <a class="nav-link" href="/listings/new">Add New Listing</a>
+        <a class="nav-link add-new-text" href="/listings/new"><i class="fa-solid fa-circle-plus me-1"></i>Host New</a>
         <% if (!currUser) { %>
-        <a class="nav-link" href="/signup">Signup</a>
-        <a class="nav-link" href="/login">Login</a>
-        <% } %>
-        <% if (currUser) { %>
-        <a class="nav-link" href="/logout">Logout</a>
-        <% } %>
+          <a class="nav-link" href="/signup"><i class="fa-solid fa-user-plus me-1"></i> Signup</a>
+          <a class="nav-link" href="/login"><i class="fa-solid fa-right-to-bracket me-1"></i>Login</a>
+          <% } %>
+            <% if (currUser) { %>
+              <a class="nav-link" href="/logout"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+              <% } %>
       </div>
     </div>
   </div>

@@ -1,0 +1,65 @@
+#reviews-section {
+  margin-top: 1rem;
+}
+
+/* card container */
+#reviews-section .review-card {
+  border-radius: 10px;
+  overflow: hidden;                      /* important if children transform/scale */
+  background: #ffffff;
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+  box-shadow: inset 4px 4px 10px rgba(0,0,0,0.04), /* subtle inset for depth */
+              inset -4px -4px 10px rgba(255,255,255,0.6);
+  padding: 0 0 0 1rem;                            /* we'll control spacing in .card-body */
+  border: 1px solid rgba(0,0,0,0.06);
+}
+
+/* card body spacing */
+#reviews-section .review-card .card-body {
+  padding: 1rem;
+}
+
+/* Title (author) */
+#reviews-section .card-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 0.25rem;
+}
+
+
+#reviews-section .starability-result {
+  display: inline-block;
+  margin: 0.25rem 0 0.6rem 0;
+  font-size: 1.35rem;       /* makes stars larger */
+  line-height: 1;
+  letter-spacing: 0.06em;
+}
+
+/* Comment text */
+#reviews-section .card-text {
+  color: #333;
+  margin-bottom: 0.9rem;
+}
+
+/* Delete button — compact, rounded */
+#reviews-section .btn-dark {
+  background: #222;
+  border: none;
+  color: #fff;
+  padding: 0.32rem 0.55rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  box-shadow: none;
+}
+
+/* Hover behavior: pop out from inset to lifted */
+#reviews-section .review-card:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    8px 14px 30px rgba(13, 38, 59, 0.08),
+    -6px -6px 18px rgba(255,255,255,0.9);
+}
+

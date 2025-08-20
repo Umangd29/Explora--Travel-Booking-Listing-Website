@@ -1,0 +1,134 @@
+#index-page .row a {
+    text-decoration: none;
+}
+
+
+/* Listing Card Div */
+#index-page .listings-card {
+    border: none !important;
+    margin-bottom: 2rem !important;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* smooth hover effect */
+    cursor: pointer;
+
+}
+
+#index-page .listings-card:hover {
+    transform: translateY(-8px);
+    /* lift card slightly */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+#index-page .listings-card:hover .card-img-top {
+    transform: scale(0.8);
+    /* zoom effect */
+    transform: translateY(-8px);
+}
+
+/* Card body Div */
+#index-page .card-body {
+    padding: 0 !important;
+}
+
+
+/* Card Img Top Div */
+#index-page .card-img-top {
+    border-radius: 1rem !important;
+    object-fit: cover !important;
+    width: 100% !important;
+    height: 20rem;
+    transition: transform 0.4s ease;
+    /* smooth zoom */
+}
+
+/* card Img Overlay Div */
+#index-page .card-img-overlay {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* 
+#index-page .listings-card:hover .card-img-overlay {
+  opacity: 0.2;
+  background-color: white;
+} */
+
+/* single-icon div */
+.single-icon a {
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    width: 6vw;
+}
+
+.single-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    /* margin-right: 0.5rem; */
+    opacity: 0.7;
+}
+
+
+.category-rail{
+  overflow: hidden;
+  width: 65vw;
+}
+
+.icon-filters{
+  display: flex;
+  /* gap: 0.5rem; */
+  width: max-content;         /* shrink to content width */
+  will-change: transform;
+  /* animation is PAUSED until hover */
+  animation: marquee 20s linear infinite;
+  animation-play-state: paused;
+}
+
+.category-rail:hover .icon-filters{
+  animation-play-state: running;  /* start moving on hover */
+}
+
+@keyframes marquee{
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); } /* -50% because we duplicated once */
+}
+
+
+
+.single-icon p {
+    font-size: 0.8rem;
+}
+
+.single-icon:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.icon-filter-wapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* flex-wrap: wrap; */
+}
+
+.tax-info {
+    display: none;
+}
+
+.tax-toggle {
+    border: 1px solid black;
+    /* width: vw; */
+    margin-left: 2rem;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 1rem;
+    font-weight: 500;
+}
+
+.toggle-div {
+    font-size: 1rem;
+}

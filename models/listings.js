@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const { Schema } = mongoose; 
+const { Schema } = mongoose;
 const Review = require("./review.js");
 
 const listingSchema = new Schema({
@@ -26,6 +26,11 @@ const listingSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: "User",
     },
+    category: {
+        type: [String],
+        enum: ["Rooms","Iconic-Cities","Trending","Mountains","Castles","Amazing-Pools","Camping","Farm","Arctic","Beach","Boat","Ski-in-out","Apartment","New","Woodlands","Lake","Cabins","Countryside","Bed-and-Breakfasts","Campsite","Historical-Homes"],
+        // required: true
+    }
 });
 
 listingSchema.post("findOneAndDelete", async (listing) => {
