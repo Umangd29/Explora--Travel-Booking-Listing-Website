@@ -10,9 +10,6 @@ const mongoose = require('mongoose');
 const methodOverride = require("method-override");
 const ejsMate = require('ejs-mate');
 const ExpressError = require("./utils/ExpressError.js");
-const listingsRouter = require('./routes/listings');
-const reviewsRouter = require('./routes/reviews');
-const userRouter = require('./routes/users');
 const session = require("express-session");
 const flash = require("connect-flash");
 const LocalStrategy = require('passport-local');
@@ -21,6 +18,11 @@ const User = require('./models/user');
 const MongoStore = require('connect-mongo');
 const { error } = require("console");
 const Listing = require('./models/listings');
+const listingsRouter = require('./routes/listings');
+const reviewsRouter = require('./routes/reviews');
+const userRouter = require('./routes/users');
+const categoryRouter = require('./routes/category');
+const searchRouter = require('./routes/search');
 
 
 
@@ -45,7 +47,7 @@ const store = MongoStore.create({
     },
 })
 
-store.on(error, (err)=> {
+store.on(error, (err) => {
     console.log("Error in MONGO SESSION STORE", err)
 });
 
@@ -90,6 +92,9 @@ main()
 app.use("/listings", listingsRouter);
 app.use("/listings/:id/reviews", reviewsRouter);
 app.use("/", userRouter);
+app.use("/category", categoryRouter);
+app.use("/search", searchRouter);
+
 
 
 app.get("/", async (req, res) => {

@@ -72,30 +72,38 @@
 }
 
 
-.category-rail{
-  overflow: hidden;
-  width: 65vw;
+.scroll-btn {
+  background: white;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  position: relative;
+  z-index: 2;
 }
+
+#leftBtn { margin-right: 0.5rem; }
+#rightBtn { margin-left: 0.5rem; }
+
+
+.category-rail {
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  width: 59vw; 
+}
+
+.category-rail::-webkit-scrollbar { display: none; }
 
 .icon-filters{
   display: flex;
   /* gap: 0.5rem; */
-  width: max-content;         /* shrink to content width */
-  will-change: transform;
-  /* animation is PAUSED until hover */
-  animation: marquee 20s linear infinite;
-  animation-play-state: paused;
+  width: max-content;     
 }
-
-.category-rail:hover .icon-filters{
-  animation-play-state: running;  /* start moving on hover */
-}
-
-@keyframes marquee{
-  from { transform: translateX(0); }
-  to   { transform: translateX(-50%); } /* -50% because we duplicated once */
-}
-
 
 
 .single-icon p {
@@ -127,6 +135,10 @@
     padding: 1rem;
     border-radius: 1rem;
     font-weight: 500;
+}
+
+.tax-toggle:hover {
+    border: 1.5px solid royalblue;
 }
 
 .toggle-div {

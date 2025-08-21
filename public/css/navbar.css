@@ -84,7 +84,7 @@
 }
 
 .search-btn i {
-  display: inline;
+  display: inline !important;
   margin-right: 0.5rem;
 }
 
