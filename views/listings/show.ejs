@@ -5,32 +5,32 @@
 
     <body>
         <div class="row mt-3">
-            <div class="col col-8 offset-3 show-card">
+            <div class="col col-8 offset-2 show-card">
 
-                <h2>
+                <h2 class="show-title">
                     <%= List.title %>
                 </h2>
 
-                <div class="card col-10 listings-card">
+                <div class="card col-10 listings-card show-card">
                     <img src="<%= List.image.url%>" class="card-img-top show-page-image" alt="listing_image">
 
-                    <div class="card-body">
-                        <p class="card-text mt-2">Owned By: <i>
+                    <div class="card-body show-card-body">
+                        <p class="card-text show-card-text">Owned By: <i>
                                 <%= List.owner.username %>
                             </i></p>
-                        <p class="card-text mt-2">
+                        <p class="card-text show-card-text">
                             <%= List.description %>
                         </p>
-                        <p class="card-text mt-2">₹ <%= List.price ? List.price.toLocaleString("en-IN") : "N/A" %>
+                        <p class="card-text show-card-text">₹ <%= List.price ? List.price.toLocaleString("en-IN") : "N/A" %>
                         </p>
-                        <p class="card-text mt-2">
+                        <p class="card-text show-card-text">
                             <%= List.location %>
                         </p>
-                        <p class="card-text mt-2">
+                        <p class="card-text show-card-text">
                             <%= List.country %>
                         </p>
 
-                        <p class="card-text mt-2">
+                        <p class="card-text show-card-text">
                             Categories:
                             <% if (List.category && List.category.length> 0) { %>
                                 <%= List.category.join(", ") %>
@@ -50,7 +50,7 @@
                     </div>
                     <% } %>
             </div>
-            <div class="col-7 offset-3">
+            <div class="col-7 offset-2">
                 <hr>
                 <% if(currUser) { %>
                     <form action="/listings/<%= List._id %>/reviews" method="POST" class="needs-validation" novalidate>
@@ -115,7 +115,7 @@
 
 
             </div>
-            <!-- <div class="col-7 offset-3">
+            <!-- <div class="col-7 offset-2">
                 <h3>Where you'll be</h3>
                 <div id="map"></div>
             </div> -->
