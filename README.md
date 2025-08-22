@@ -12,7 +12,7 @@
 **Explora** is a **full-stack travel booking and listing platform** where users can explore, list, and manage travel destinations.  
 It’s built with the **MVC architecture** for clean structure and scalability.  
 
-🚀 **Live Demo:** [Explora Website](https://wanderlust-unhh.onrender.com/listings)
+🚀 **Live Demo:** [Explora Website](https://explora-travel-booking-listing-website.onrender.com)
 
 ---
 
