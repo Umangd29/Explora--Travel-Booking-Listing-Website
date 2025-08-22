@@ -81,6 +81,13 @@ It’s built with the **MVC architecture** for clean structure and scalability.
 
 ---
 
+
+![Stars](https://img.shields.io/github/stars/Umangd29?affiliations=OWNER&style=for-the-badge)
+![Followers](https://img.shields.io/github/followers/Umangd29?style=for-the-badge)
+![Profile Views](https://komarev.com/ghpvc/?username=Umangd29&style=for-the-badge&color=blue)
+
+---
+
 ### 💖 Support & Contribution
 If you like this project, please ⭐ it on GitHub and share it!  
 PRs and suggestions are always welcome.
