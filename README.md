@@ -68,6 +68,13 @@ It’s built with the **MVC architecture** for clean structure and scalability.
 ### 5️⃣ Review Page
 <img src="public/images/review.jpg" alt="Review Page" width="600">
 
+### 6️⃣ Category Page
+<img src="public/images/category.jpg" alt="Category Page" width="600">
+
+### 7️⃣ Index Page in Phone view
+<img src="public/images/indexp.jpg" alt="Index Page" width="300">
+
+
 ---
 
 ## 👨‍💻 Author
