@@ -40,8 +40,7 @@ It’s built with the **MVC architecture** for clean structure and scalability.
 - 📝 **Add & Edit Listings** — Users can create and manage their own listings.
 - 🖼 **Image Uploads** — Support for multiple images per listing.
 - ⚡ **Fast Performance** — Optimized queries & clean routing.
-- 💻 **Responsive Design** — Fully optimized for **desktop**.  
-> 🚧 **Mobile responsiveness** is currently under development.  
+- 💻 **Responsive Design** — Fully optimized for **desktop** and **Mobile**.  
 > ✨ Upcoming features:  
 > - 🗺️ Interactive maps  
 
