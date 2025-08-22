@@ -44,9 +44,6 @@ It’s built with the **MVC architecture** for clean structure and scalability.
 > 🚧 **Mobile responsiveness** is currently under development.  
 > ✨ Upcoming features:  
 > - 🗺️ Interactive maps  
-> - 🔍 Search bar  
-> - 🎯 Advanced filters  
-> - 🧭 Enhanced navigation bar with icons  
 
 
 ---
