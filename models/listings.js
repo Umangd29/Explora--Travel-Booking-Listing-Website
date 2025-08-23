@@ -28,7 +28,7 @@ const listingSchema = new Schema({
     },
     category: {
         type: [String],
-        enum: ["Rooms","Iconic-Cities","Trending","Mountains","Castles","Amazing-Pools","Camping","Farm","Arctic","Beach","Boat","Ski-in-out","Apartment","New","Woodlands","Lake","Cabins","Countryside","Bed-and-Breakfasts","Campsite","Historical-Homes"],
+        enum: ["Rooms","Iconic-Cities","Trending","Mountains","Castles","Amazing-Pools","Camping","Farm","Arctic","Beach","Boat","Ski-in-out","Apartment","NAew","Woodlands","Lake","Cabins","Countryside","Bed-and-Breakfasts","Campsite","Historical-Homes"],
         // required: true
     }
 });
