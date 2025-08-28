@@ -1,10 +1,19 @@
 .add-btn,
 .edit-btn {
-  background-color: #fe4242 !important;
-  border: none !important;
+  background-color: #fe4242 ;
+  border: none ;
 }
 
+.edit-btn:hover {
+  background-color: #fe4242;
+}
 
 .btn:hover {
   transform: scale(1.02);
 }
+
+
+
+
+
+

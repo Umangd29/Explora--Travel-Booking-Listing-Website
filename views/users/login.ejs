@@ -15,8 +15,13 @@
                     </div>
                     <div class="mb-3 mt-2">
                         <label for="password" class="form-label">Password</label>
-                        <input type="password" class="form-control" col="30" row="5" id="password" name="password"
-                            required></input type="text">
+                        <div class="input-group">
+                            <input type="password" class="form-control" col="30" row="5" id="password" name="password"
+                                required></input type="text">
+                            <span class="input-group-text password-toggle bg-outline-secondary" id="togglePassword">
+                                <i class="fa-solid fa-eye"></i>
+                            </span>
+                        </div>
                         <div class="valid-feedback">Looks good!</div>
                         <div class="invalid-feedback">Please provide a valid Password.</div>
                     </div>
@@ -26,4 +31,19 @@
                 </form>
             </div>
         </div>
+
+
+        <script>
+            const togglePassword = document.getElementById("togglePassword");
+            const passwordInput = document.getElementById("password");
+
+            togglePassword.addEventListener("click", function () {
+                const type = passwordInput.getAttribute("type") === "password" ? "text" : "password";
+                passwordInput.setAttribute("type", type);
+
+                this.innerHTML = type === "password"
+                    ? '<i class="fa-solid fa-eye"></i>'
+                    : '<i class="fa-solid fa-eye-slash"></i>';
+            });
+        </script>
     </body>

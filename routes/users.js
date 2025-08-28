@@ -3,13 +3,13 @@ const router = express.Router({ mergeParams: true });
 const wrapAsync = require("../utils/wrapAsync.js");
 const User = require('../models/user.js');
 const passport = require("passport");
-const { saveRedirectUrl } = require("../middleware.js");
+const { saveRedirectUrl, isSignedUp, isValidEmail, isValidPassword} = require("../middleware.js");
 const userController = require("../controllers/users.js");
 
 
 router.route("/signup")
     .get(userController.renderSignupForm)
-    .post(wrapAsync(userController.signup));
+    .post(isValidEmail, isValidPassword, isSignedUp, wrapAsync(userController.signup));
 
 
 router.route("/login")

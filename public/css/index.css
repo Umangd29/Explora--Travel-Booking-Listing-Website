@@ -1,17 +1,17 @@
 .index-card {
-    border: none !important;
-    margin-bottom: 4vh !important;
+    border: none ;
+    margin-bottom: 4vh ;
 }
 
 .index-text-body {
-    padding: 0 !important;
+    padding: 0 ;
 }
 
 .index-img {
-    border-radius: 2vw !important;
-    object-fit: cover !important;
-    width: 100% !important;
-    height: 24vw !important;
+    border-radius: 2vw ;
+    object-fit: cover ;
+    width: 100% ;
+    height: 24vw ;
 }
 
 .index-text {
@@ -142,7 +142,7 @@
 @media (max-width: 619px) {
 
     .single-icon a {
-        width: 10vw !important;
+        width: 10vw ;
     }
 
     .single-icon {
@@ -154,7 +154,7 @@
     }
 
     .index-card {
-        margin-left: 7vw !important;
+        margin-left: 7vw ;
     }
 
     .scroll-btn {
@@ -174,8 +174,8 @@
     }
 
     .index-img {
-        height: 50vw !important;
-        width: 75vw !important;
+        height: 50vw ;
+        width: 75vw ;
     }
 
     .index-overlay {
@@ -188,7 +188,7 @@
 
 
     .index-img {
-        height: 35vw !important;
+        height: 35vw ;
     }
 
     .index-text {
@@ -196,7 +196,7 @@
     }
 
     .category-rail {
-        width: 100vw !important;
+        width: 100vw ;
     }
 
     .single-icon p {
