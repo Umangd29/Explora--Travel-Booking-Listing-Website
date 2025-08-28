@@ -52,7 +52,9 @@
                     <% } %>
             </div>
             <div class="col-7 offset-2">
+                <% if(currUser) { %>
                 <button class="btn btn-outline-success col col-md-6 offset-3 reserve-btn">Reserve</button>
+                <% } %>
                 <hr>
                 <% if(currUser) { %>
                     <form action="/listings/<%= List._id %>/reviews" method="POST" class="needs-validation" novalidate>
